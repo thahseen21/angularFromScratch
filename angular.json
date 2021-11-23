@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "angularfromscratch": {
+      "projectType": "application",
+      "root": " ",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "tsconfig.json"
+          }
+        }
+      }
+    }
+  }
+}
