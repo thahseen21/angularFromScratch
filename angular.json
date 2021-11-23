@@ -1,18 +1,34 @@
 {
+  "version": 1,
+  "newProjectRoot": "projects",
   "projects": {
-    "AngularFromScratch": {
+    "angularfromscratch": {
       "projectType": "application",
       "root": "",
-      "prefix": "app",
       "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "outputPath": "dist/angularfromscratch",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "tsconfig.json"
-          }
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "scripts": []
+          },
+          "configurations": {
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
