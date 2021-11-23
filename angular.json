@@ -1,8 +1,9 @@
 {
   "projects": {
-    "angularfromscratch": {
+    "AngularFromScratch": {
       "projectType": "application",
-      "root": " ",
+      "root": "",
+      "prefix": "app",
       "sourceRoot": "src",
       "architect": {
         "build": {
@@ -12,6 +13,18 @@
             "main": "src/main.ts",
             "tsConfig": "tsconfig.json"
           }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "angularfromscratch:build:production"
+            },
+            "development": {
+              "browserTarget": "angularfromscratch:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
         }
       }
     }
